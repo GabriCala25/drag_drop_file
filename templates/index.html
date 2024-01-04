@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask-Dropzone Demo: Click Upload</title>
+    <link rel="stylesheet" href="static/style.css">
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('border: 2px dashed #0087F7; margin: 10px 0 10px; min-height: 100px;') }}
+</head>
+<body>
+{{ dropzone.create('/') }}
+<button id="upload" onclick="reloadPage()">Upload</button>
+
+{{ dropzone.load_js() }}
+{{ dropzone.config() }}
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+</script>
+</body>
+</html>
