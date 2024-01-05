@@ -8,11 +8,11 @@
     {{ dropzone.style('border: 2px dashed #0087F7; margin: 10px 0 10px; min-height: 100px;') }}
 </head>
 <body>
-    <div>Flask Dropzone example: uploading files</div>
+    <h2>Flask Dropzone example: uploading files</h2>
 {{ dropzone.create('/') }}
 <button id="upload">Upload</button>
 
 {{ dropzone.load_js() }}
-{{ dropzone.config(custom_options='addRemoveLinks: true', redirect_url = url_for('upload')) }}
+{{ dropzone.config(default_message='Drop here your csv file!', custom_options='addRemoveLinks: true', redirect_url = url_for('upload')) }}
 </body>
 </html>

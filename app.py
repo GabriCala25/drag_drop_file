@@ -9,7 +9,9 @@ app.config.update(
     UPLOADED_PATH= os.path.join(basedir,'static/uploads'),
     DROPZONE_MAX_FILE_SIZE = 1024,
     DROPZONE_TIMEOUT = 5*60*1000,
-    DROPZONE_UPLOAD_ON_CLICK=True
+    DROPZONE_UPLOAD_ON_CLICK = True,
+    DROPZONE_ALLOWED_FILE_CUSTOM = True,
+    DROPZONE_ALLOWED_FILE_TYPE = '.csv'
     )
 
 dropzone = Dropzone(app)
