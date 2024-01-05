@@ -1,0 +1,1 @@
+Hi! This is a simple code example. I'm using the library flask-dropzone to create a zone where to upload files to server! It will be super useful for storing data inside some file the user upload or to directly store file inside the database.
