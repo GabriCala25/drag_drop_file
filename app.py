@@ -15,16 +15,10 @@ app.config.update(
 dropzone = Dropzone(app)
 @app.route('/',methods=['POST','GET'])
 def upload():
-    count = 0
     if request.method == 'POST':
         for key, f in request.files.items():
             if key.startswith('file'):
                 f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
-                count += 1
-        if count == 1:
-            return render_template('index.html')
-        elif count > 1:
-            return render_template('index.html')
     return render_template('index.html')
 
 if __name__ == '__main__':

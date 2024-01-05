@@ -13,6 +13,6 @@
 <button id="upload">Upload</button>
 
 {{ dropzone.load_js() }}
-{{ dropzone.config(custom_options='addRemoveLinks: true') }}
+{{ dropzone.config(custom_options='addRemoveLinks: true', redirect_url = url_for('upload')) }}
 </body>
 </html>
