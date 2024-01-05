@@ -10,14 +10,9 @@
 <body>
     <div>Flask Dropzone example: uploading files</div>
 {{ dropzone.create('/') }}
-<button id="upload" onclick="reloadPage()">Upload</button>
+<button id="upload">Upload</button>
 
 {{ dropzone.load_js() }}
 {{ dropzone.config() }}
-<script>
-    function reloadPage() {
-        location.reload();
-    }
-</script>
 </body>
 </html>
